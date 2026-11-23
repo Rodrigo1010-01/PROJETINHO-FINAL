@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090a12"><meta name="description" content="Uma viagem pelas memórias, pessoas e sonhos que fizeram parte da minha jornada escolar.">
+  <title>Além do Horizonte — uma jornada Interestelar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261123-4"><script defer src="js/data.js"></script><script defer src="js/redacoes.js"></script><script defer src="js/main.js?v=20261123-4"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="noise" aria-hidden="true"></div><div class="scroll-progress" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Além do Horizonte, início"><span class="brand-mark">✳</span><span>ARQUIVO <b>INTERESTELAR</b></span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Navegação principal"><a href="#jornada">Jornada</a><a href="#orbita">Meu universo</a><a href="#heroi">Ben 10</a><a href="#tripulacao">Tripulação</a><a href="#redacoes">Redações</a><a href="#sinais">Sinais</a></nav>
+    <button class="sound-toggle" aria-pressed="false"><span class="sound-icon">♫</span><span class="sound-label">SOM DESLIGADO</span></button>
+  </header>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <canvas id="universe" aria-label="Universo interativo tridimensional com estrelas e planetas"></canvas>
+      <div class="hero-vignette"></div>
+      <div class="hero-copy"><p class="eyebrow"><i></i> ARQUIVO PESSOAL · REGISTRO 2026</p><p class="hero-kicker">UMA VIDA INTEIRA CABE EM UM PONTO AZUL</p>
+        <h1 id="hero-title">Além do<br><em>horizonte.</em></h1><p class="hero-desc">Entre o primeiro dia de aula e a última chamada, existe um universo inteiro. Este é o meu.</p>
+        <a class="primary-link" href="#jornada"><span>INICIAR A VIAGEM</span><b>↘</b></a>
+      </div>
+      <div class="hero-hud hud-left"><span class="hud-dot"></span> TRANSMISSÃO ESTÁVEL <span class="hud-divider">/</span> TERRA, VIA LÁCTEA</div>
+      <div class="hero-hud hud-right"><span>ARRASTE PARA EXPLORAR</span><span class="mouse-glyph">◎</span></div>
+      <div class="hero-index"><span>01</span><i></i><span>05</span></div>
+      <div class="hero-quote"><span class="quote-line"></span><span>“O amor é a única coisa que somos capazes de perceber<br>que transcende as dimensões do tempo e do espaço.”</span><small>— INTERESTELAR</small></div>
+    </section>
+
+    <section class="intro section-pad" id="jornada">
+      <div class="section-label"><span>01 / A JORNADA</span><span>MEMÓRIA · TEMPO · GRAVIDADE</span></div>
+      <div class="intro-grid"><div><p class="eyebrow">UM PEQUENO PASSO, UM UNIVERSO</p><h2>O tempo passou.<br><em>As marcas ficaram.</em></h2></div><div class="intro-text"><p>Minha história na escola não aconteceu em linha reta. Teve gravidade, turbulência, encontros que mudaram a rota e pessoas que foram estrelas quando eu precisei encontrar o caminho.</p><p>Do Jardim de Infância ao último ano do Ensino Médio, cada fase deixou uma luz viajando até aqui. Este arquivo é um jeito de olhar para trás — e entender o quanto cresci.</p><button class="text-button" id="openLog">ABRIR DIÁRIO DE BORDO <span>↗</span></button></div></div>
+      <div class="timeline-wrap"><div class="timeline-track"><div class="timeline-fill"></div></div><div class="timeline" id="timeline"></div><div class="timeline-card" id="timelineCard" aria-live="polite"></div></div>
+    </section>
+    <section class="memories section-pad" id="registros">
+      <div class="section-label"><span>ARQUIVO VISUAL</span><span>REGISTROS DE BORDO · 35 IMAGENS</span></div>
+      <div class="memory-heading"><div><p class="eyebrow">PEQUENOS PONTOS DE LUZ</p><h2>Momentos que<br>ficaram <em>comigo.</em></h2></div><p>Fotografias que guardam um pedaço desta viagem. Todas aparecem juntas; toque em uma para ampliar.</p></div>
+      <div class="photo-gallery" id="photoGrid" aria-label="Galeria completa de fotografias"></div>
+    </section>
+
+    <section class="cosmos section-pad" id="orbita">
+      <div class="section-label"><span>02 / MEU UNIVERSO</span><span>INTERESSES EM ÓRBITA</span></div>
+      <div class="cosmos-heading"><div><p class="eyebrow">CADA INTERESSE, UM MUNDO</p><h2>O que me mantém<br><em>em movimento.</em></h2></div><p class="small-note">Selecione um planeta para<br>descobrir uma parte de mim.</p></div>
+      <div class="planet-system" id="planetSystem"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="orbit orbit-four"></div><div class="system-sun"><span>EU</span></div><div id="planetNodes"></div><div class="planet-readout" id="planetReadout"><span class="readout-kicker">SISTEMA PESSOAL · 4 PLANETAS</span><strong>Escolha uma órbita</strong><p>Cada mundo guarda uma coisa que faz parte de quem eu sou.</p></div></div>
+      <div class="interest-list" id="interestList"></div>
+    </section>
+
+    <section class="memorial section-pad" id="memorial">
+      <div class="section-label"><span>03 / MEMÓRIA QUE ATRAVESSA O TEMPO</span><span>AMOR EM OUTRA DIMENSÃO</span></div>
+      <div class="memorial-grid"><div class="memorial-art"><img class="memorial-portrait" src="assets/homenagens/avo.jpg" alt="Minha avó me segurando ainda bebê" loading="lazy"><div class="memorial-orbit" aria-hidden="true"></div><div class="memorial-star" aria-hidden="true">✦</div><div class="memorial-caption">UMA LUZ QUE NÃO SE APAGA</div></div><div class="memorial-copy"><p class="eyebrow">PARA A MINHA AVÓ</p><h2>Há presenças que<br>nem o tempo <em>apaga.</em></h2><p>Algumas pessoas continuam perto, mesmo depois de partirem. O amor que recebi da minha avó segue comigo — nas lembranças, no que aprendi com ela e em tudo que ainda levo para a vida.</p><p>Este vídeo é uma homenagem e um abraço em forma de memória.</p><button class="primary-link video-open" id="openVideo"><span>ASSISTIR À HOMENAGEM</span><b>▶</b></button></div></div>
+    </section>
+
+    <section class="tribute tribute-gabriel section-pad" id="gabriel">
+      <div class="section-label"><span>04 / FORÇA QUE CONTINUA</span><span>UMA HOMENAGEM</span></div>
+      <div class="tribute-grid"><div class="tribute-photo ganley-art"><img src="assets/homenagens/gabriel-ganley.jpg" alt="Gabriel Ganley sorrindo em uma academia" loading="lazy"><div class="ganley-quotes"><p>“SE EU ME DEDICO 100%<br>NÃO TEM COMO EU PERDER”</p><p>“OFF É OFF<br>E PRÉ É PRÉ”</p></div><span class="photo-tag">FORÇA · CONSTÂNCIA · MEMÓRIA</span></div><div class="tribute-copy"><p class="eyebrow">EM MEMÓRIA DE GABRIEL GANLEY</p><h2>Algumas forças<br>nos ajudam a <em>voltar.</em></h2><p>Gabriel Ganley me inspirou a treinar, a persistir e a acreditar que era possível atravessar dias difíceis. Em um período em que eu lutava contra a depressão, a motivação que encontrei em sua trajetória me ajudou a dar passos de volta para mim mesmo.</p><p>Minha gratidão não cabe em um treino nem em uma página. Ela segue comigo — em cada vez que escolho continuar.</p><div class="tribute-signature">COM RESPEITO, ADMIRAÇÃO E GRATIDÃO <span>✦</span></div></div></div>
+    </section>
+
+    <section class="ben-tribute section-pad" id="heroi">
+      <div class="section-label"><span>05 / UM HERÓI DA INFÂNCIA</span><span>CORAGEM · ESCOLHAS · IMAGINAÇÃO</span></div>
+      <div class="ben-grid"><div class="ben-art"><img src="assets/homenagens/ben-10.jpg" alt="Ben 10 em diferentes fases e personagens, em uma composição verde" loading="lazy"><span class="omnitrix-mark" aria-hidden="true">10</span><span class="ben-image-caption">UMA HISTÓRIA QUE FICOU COMIGO</span></div><div class="ben-copy"><p class="eyebrow">BEN 10 · UMA INSPIRAÇÃO</p><h2>O herói que<br>me ensinou a <em>escolher.</em></h2><p>Ben 10 marcou minha infância e continua representando algo que levo comigo: coragem não é nunca ter medo, é tentar fazer o que é certo com aquilo que temos.</p><blockquote>“Seja um herói.”</blockquote><p class="ben-note">Uma frase simples para lembrar, todos os dias, que nossas atitudes também podem fazer diferença.</p></div></div>
+    </section>
+
+    <section class="crew section-pad" id="tripulacao">
+      <div class="section-label"><span>06 / A TRIPULAÇÃO</span><span>GENTE QUE FEZ DIFERENÇA</span></div><div class="crew-heading"><div><p class="eyebrow">NENHUMA JORNADA É SOLITÁRIA</p><h2>Professores que<br>mudaram <em>minha rota.</em></h2></div><p>Na sala de aula, encontrei pessoas que me ensinaram muito além da matéria. Clique em cada retrato para ler minha homenagem.</p></div>
+      <div class="teacher-grid" id="teacherGrid"></div>
+    </section>
+
+    <section class="essays section-pad" id="redacoes">
+      <div class="section-label"><span>07 / PORTFÓLIO DE REDAÇÕES</span><span>17 TEXTOS · LEITURA EM ÓRBITA</span></div><div class="essays-heading"><div><p class="eyebrow">IDEIAS QUE APRENDERAM A VOAR</p><h2>Palavras que<br>me <em>trouxeram até aqui.</em></h2></div><p>Deixo 17 módulos prontos para receber os textos corretos. Cada redação poderá ser aberta em uma leitura própria, como uma página de diário de bordo.</p></div>
+      <div class="essay-controls"><label class="search-wrap"><span>⌕</span><input type="search" id="essaySearch" placeholder="Buscar por título ou tema…" aria-label="Buscar redações"></label><span class="essay-count">17 MÓDULOS RESERVADOS</span></div>
+      <div class="essay-grid" id="essayGrid"></div>
+    </section>
+
+    <section class="signals section-pad" id="sinais">
+      <div class="section-label"><span>08 / SINAIS DO UNIVERSO</span><span>O QUE SEMPRE ESTEVE NO MEU RADAR</span></div><div class="signals-grid"><div><p class="eyebrow">CANAIS QUE FIZERAM PARTE DA MINHA HISTÓRIA</p><h2>Vozes que<br>ecoam da <em>infância.</em></h2><p class="signals-intro">Criadores que fizeram parte das tardes, das risadas, dos jogos e das descobertas. Veja as fotos de perfil e visite os canais que me marcaram.</p><div class="channel-cloud" id="channelCloud" aria-label="Canais favoritos"></div></div><div class="signals-side"><div class="record-card"><div class="record-label">FREQUÊNCIA ATUAL · 04 FAIXAS</div><h3>Trilha sonora<br>da viagem</h3><div id="musicList" class="music-list"></div></div><div class="film-card"><span class="film-kicker">CINEMA QUE ME MARCOU</span><div class="film-title">Interestelar <i>✦</i></div><div class="film-title">Doutor Estranho<br><small>no Multiverso da Loucura</small></div><div class="film-title">Homem de Ferro</div><span class="film-foot">HISTÓRIAS SOBRE TEMPO, CORAGEM E POSSIBILIDADE</span></div><div class="anime-card-panel"><span class="film-kicker">ANIMES QUE ME MARCARAM</span><h3>Histórias que<br>ficaram comigo</h3><div class="anime-list" id="animeList"></div></div></div></div>
+    </section>
+    <footer class="footer"><a class="brand" href="#inicio"><span class="brand-mark">✳</span><span>ARQUIVO <b>INTERESTELAR</b></span></a><p>Feito de lembranças, curiosidade e um pouco de poeira estelar.</p><a class="back-top" href="#inicio">VOLTAR AO INÍCIO ↑</a></footer>
+  </main>
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal-backdrop" data-close="true"></div><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" aria-label="Fechar">×</button><p class="eyebrow" id="modalEyebrow">ARQUIVO PESSOAL</p><h2 id="modalTitle"></h2><div class="modal-content" id="modalContent"></div></div></div>
+  <div class="audio-dock" id="audioDock" aria-live="polite"><span class="equalizer"><i></i><i></i><i></i></span><span>AMBIENTE ESPACIAL</span><button id="muteAudio" aria-label="Silenciar som">×</button></div>
+</body>
+</html>
